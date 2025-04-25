@@ -1,5 +1,10 @@
-import { motion } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -15,16 +20,28 @@ export default function Footer() {
           Follow Us
         </motion.h3>
         <div className="flex justify-center space-x-8 mb-6">
-          <a href="https://facebook.com" className="text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://www.facebook.com/profile.php?id=61575584157550"
+            className="text-gray-400 hover:text-blue-500 transition-colors"
+          >
             <FaFacebookF className="w-8 h-8" />
           </a>
-          <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://www.instagram.com/product_ware/"
+            className="text-gray-400 hover:text-pink-600 transition-colors"
+          >
             <FaInstagram className="w-8 h-8" />
           </a>
-          <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://twitter.com"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
             <FaTwitter className="w-8 h-8" />
           </a>
-          <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://linkedin.com"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
             <FaLinkedinIn className="w-8 h-8" />
           </a>
         </div>
