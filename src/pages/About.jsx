@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import image from "/HeroImage.png"
 export default function About() {
   return (
     <div className="min-h-screen bg-[#fff7ea] py-20 px-4 sm:px-10 mt-10">
@@ -12,7 +12,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="/about/about-beauty.jpg"
+            src={image}
             alt="About Us"
             className="rounded-3xl shadow-lg object-cover w-full max-h-[600px]"
           />
@@ -30,7 +30,7 @@ export default function About() {
           </h2>
 
           <p className="text-gray-700 text-lg leading-8 mb-6">
-            At <span className="font-semibold text-pink-500">Glow Essentials</span>, we believe that beauty begins with self-love. Our mission is to empower every individual to embrace their natural beauty through clean, effective, and personalized skincare solutions.
+            At <span className="font-semibold text-pink-500">Product Ware</span>, we believe that beauty begins with self-love. Our mission is to empower every individual to embrace their natural beauty through clean, effective, and personalized skincare solutions.
           </p>
 
           <p className="text-gray-600 leading-7">

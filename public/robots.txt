@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://productware.in/sitemap.xml
+
+# Important Pages (allowed for crawling)
+Allow: /products
+Allow: /beauty-tips
+Allow: /about-us
+Allow: /contact-us
+Allow: /scan
+Allow: /faq
+
+# Block private/admin URLs (example)
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /api

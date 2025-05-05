@@ -74,7 +74,7 @@ export default function Contact() {
       className="w-32 opacity-90 transform transition-all hover:scale-110 hover:opacity-100"
     />
     <p className="mt-2 text-center text-sm text-gray-500">
-      YourGlow Beauty • Pure. Powerful. Personal.
+      Product ware • Pure. Powerful. Personal.
     </p>
   </div>
 </div>
@@ -82,52 +82,72 @@ export default function Contact() {
 
           {/* Form Section */}
           <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="bg-white p-8 rounded-3xl shadow-[0_4px_20px_rgba(255,192,203,0.2)] space-y-6"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thank you for contacting us 🌸");
-            }}
-          >
-            <div>
-              <label className="block mb-1 text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <input
-                type="text"
-                required
-                className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 text-sm font-medium text-gray-700">
-                Email
-              </label>
-              <input
-                type="email"
-                required
-                className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
-              />
-            </div>
-            <div>
-              <label className="block mb-1 text-sm font-medium text-gray-700">
-                Message
-              </label>
-              <textarea
-                rows="4"
-                required
-                className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition duration-300 shadow-md"
-            >
-              Send Message
-            </button>
-          </motion.form>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.6 }}
+  className="bg-white text-black p-8 rounded-3xl shadow-[0_4px_20px_rgba(255,192,203,0.2)] space-y-6"
+  onSubmit={(e) => {
+    e.preventDefault();
+
+    let  form = e.target;
+    let  name = form.name.value;
+    let  email = form.email.value;
+    let  message = form.message.value;
+
+    let  mailtoLink = `mailto:productware91@gmail.com?subject=New Message from ${encodeURIComponent(
+      name
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
+e.target;
+     form.name.value="";
+    form.email.value="";
+     form.message.value="";
+  }}
+>
+  <div>
+    <label className="block mb-1 text-sm font-medium text-gray-700">
+      Name
+    </label>
+    <input
+      type="text"
+      name="name"
+      required
+      className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
+    />
+  </div>
+  <div>
+    <label className="block mb-1 text-sm font-medium text-gray-700">
+      Email
+    </label>
+    <input
+      type="email"
+      name="email"
+      required
+      className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
+    />
+  </div>
+  <div>
+    <label className="block mb-1 text-sm font-medium text-gray-700">
+      Message
+    </label>
+    <textarea
+      rows="4"
+      name="message"
+      required
+      className="w-full border border-pink-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-pink-50"
+    />
+  </div>
+  <button
+    type="submit"
+    className="bg-pink-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-700 transition duration-300 shadow-md"
+  >
+    Send Message
+  </button>
+</motion.form>
+
         </div>
       </div>
     </div>

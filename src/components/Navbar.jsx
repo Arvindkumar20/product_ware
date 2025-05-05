@@ -9,7 +9,7 @@ const navItems = [
   "Home",
   "Products",
   "Beauty Tips",
-  "Services",
+  "FAQ",
   "About Us",
   "Contact Us",
 ];
@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full shadow-md bg-green-100 fixed top-0 left-0 z-50">
+      <nav className="w-full shadow-md bg-white fixed top-0 left-0 z-50">
         <div className="flex items-center justify-between px-6 py-1 max-w-7xl mx-auto">
           {/* <h1 className="text-2xl font-bold text-pink-600">ProductWare</h1> */}
           <Logo logo={logo} />
@@ -96,14 +96,14 @@ const Navbar = () => {
               </div>
               <nav className="flex flex-col gap-4">
                 {navItems.map((item, idx) => (
-                  <a
+                  <Link
                     key={idx}
-                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                    to={`/${item.toLowerCase().replace(" ", "-")}`}
                     className="text-gray-800 text-base hover:text-pink-600 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </motion.div>

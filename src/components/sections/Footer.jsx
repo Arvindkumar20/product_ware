@@ -5,6 +5,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -44,6 +45,31 @@ export default function Footer() {
           >
             <FaLinkedinIn className="w-8 h-8" />
           </a>
+        </div>
+        <div className="flex items-center justify-center gap-3 text-md font-semibold">
+          <Link to="/terms-and-condition">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className=" text-blue-600"
+            >
+              Trems & conditions
+            </motion.p>
+          </Link>
+
+          <Link to="/privacy-policy">
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className=" text-blue-600"
+            >
+              Privacy Policy
+            </motion.p>
+          </Link>
         </div>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
